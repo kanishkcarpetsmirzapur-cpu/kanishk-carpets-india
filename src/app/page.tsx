@@ -346,9 +346,13 @@ export default function Home() {
 
           const form = e.currentTarget;
 
-          const name = form.name.value;
-          const phone = form.phone.value;
-          const message = form.message.value;
+         const formData = new FormData(form);
+
+const name = formData.get("name");
+
+const phone = formData.get("phone");
+
+const message = formData.get("message");
 
           const text =
             `Name: ${name}%0A` +
